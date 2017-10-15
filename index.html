@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="./html.sortable.js"></script>
+  </head>
+  <body>
+
+    <nav>
+       <button id="fileChooser" onclick="chooseFile();">File Chooser</button>
+       <button id="runSlideshow">Run composed slideshow</button>
+    </nav>
+
+    <h1>Drag to reorder</h1>
+    <ul id="list" class="sortable"></ul>
+
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+
+    <script>
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
